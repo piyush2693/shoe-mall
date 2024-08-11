@@ -20,6 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    height: 50px;
 }
 
 .logo a {
@@ -58,11 +59,17 @@ header {
     border-radius: 5px;
     text-decoration: none;
     margin-right: 10px;
+    height: 30px;
+    padding: 5px 10px;
 }
 
 .cart-icon img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 3px;
 }
 
 .menu-toggle {
@@ -96,14 +103,40 @@ header {
 
     .menu-toggle {
         display: block;
+        margin: 8px;
+    }
+    .cart-icon img {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 3px;
     }
 }
 #page1{
     height: 100vh;
     width: 100%;
-    /* position: relative; */
-    background-color: #e67e22;
+    position: relative;
+    background-color:white;
 
+}
+#hero img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+#hero h4{
+    color: black;
+    text-align: center;
+}
+#hero h1{
+    font-size: 4vw;
+    text-align: center;
+    color: black;
+    font-weight: 900;
 }
 #page2{
     height: 100vh;
@@ -111,6 +144,34 @@ header {
     position: relative;
     background-color: #80e135;
 }
+#swiper2div{
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    padding-top: 4vw;
+    z-index: 1;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 #page3{
     height: 100vh;
     width: 100%;
@@ -148,8 +209,8 @@ header {
 
   .swiper-slide img {
     height: 100%;
-    object-fit: cover;
-    width: 60vw;
+    object-fit: contain;
+    width: 80vw;
   }
 
   .swiper {
@@ -158,4 +219,210 @@ header {
   }
 
 
- 
+<<<<<<< HEAD
+ /* ------------------------------------------------------------------------------------- */
+
+ .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    text-align: center;
+    position: relative;
+}
+.popup-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+.popup-card input[type="text"],
+.popup-card input[type="email"],
+.popup-card input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.popup-card button[type="submit"] {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+.popup-card button[type="submit"]:hover {
+    background: #0056b3;
+}
+.popup-card .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+.popup-card .close-btn:hover {
+    background: #ccc;
+}
+.google-btn {
+    background: #db4437;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+.google-btn:hover {
+    background: #c1351d;
+}
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+.login{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login p{
+    font-size: 18px;
+}
+.login-btn {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+.login-btn:hover {
+    background: #218838;
+}
+.login-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+.popup-card p {
+    margin: 10px 0;
+    color: #666;
+}
+
+ /* ------------------------------------------------------------------------------------- */
+=======
+  /* --------------------------------------------------product card------------------------------------------------------- */
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.product-actions {
+    margin-top: 20px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-secondary {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #27ae60;
+}
+/* ----------------------------------------------------------end--------------------------------------------------- */
+>>>>>>> 834f7db8c95ca419dce2a1bfa262b4414f907769

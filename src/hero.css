@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+.hero-text {
+    color: #fff;
+    max-width: 80%;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    animation: fadeIn 1.4s ease-out forwards;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.shop-now {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.explore {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ff6f61;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #e84118;
+}
+
+.hero-images {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+.hero-image {
+    width: 200px;
+    margin: 0 15px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+.hero-image-1 {
+    animation-delay: 1.2s;
+}
+
+.hero-image-2 {
+    animation-delay: 1.4s;
+}
+
+.hero-image-3 {
+    animation-delay: 1.6s;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        width: 85%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-images {
+        flex-direction: row;
+        bottom: 0;
+        right: 0;
+    }
+
+    .hero-image {
+        width: 150px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .hero-images {
+        flex-direction: column;
+        align-items: center;
+        bottom: unset;
+        right: unset;
+    }
+
+    .hero-image {
+        width: 120px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+
+    .hero-images {
+        position: relative;
+        top: 30px;
+    }
+
+    .hero-image {
+        width: 100px;
+    }
+}

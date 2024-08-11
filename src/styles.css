@@ -160,12 +160,17 @@ header {
   #swiper2div .swiper-slide{
     text-align: center;
     font-size: 18px;
+    /* color: black; */
     background: white;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
+  #page2 h1{
+    font-size: 3vw;
+    color: black;
+    margin-left: 2vw;
+  }
   #swiper2div .swiper-slide img{
     display: block;
     width: 100%;

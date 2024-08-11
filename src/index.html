@@ -9,31 +9,75 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css">
   </head>
   <body>
+    <!-- ---------------------------nav bar-------------------------------- -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <a href="#">Kratos.</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a href="#" class="signup-btn" id="signup-btn">Sign Up</a>
-          <a href="#" class="cart-icon">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAB10lEQVRIS82Vu0oEMRSGd+0V7Rar9Q30BUS7BfHWWSgo+gBupZ1rp5U+gOKCFnbeECwHX0DfwK3ETtFe/P8hGbJLNjnJzDAeOGRITs6Xc0mmXqtI6hVxa/8C3ET0VC1JmdkwIz4AqGPAevhehb6WcQAXmDzCp8oGm6leBmxXAWfKiHpYc40D9qnAXYxbRUft6uoLwDYVkLX+ygln2aipuMDTWH/JCRvcPo+JxAfm+huUtS9KWDKWzvuAMNVMOeUUehdxghPsYfZYKjZqTwJmkzHdjDqBMlUhwv3MGsdbKHslFcmTyRPrq8U7nZ5YKCuwu1G2hBIuBue5WoQSzjTz0NnNkETME5oOJoTRNmHHNFPYH21znxRspizrTM8BzLc/u0Yhqda2+mqxxpL3W9vzJ8Nu7hNpxNzEBmOjUXwvGdOsr2EH34d5wGaTebKcLffd3Zga6z3m+y2Bd2Fk/cGEpFqD5iREZcP6Wn8uMeBZOJuEXjsOsIa1d+jzMJtQ8DYcnSlnVxg3LI4vMbeu5ncwntvgoeB7OFlUjn4wjlmcfmNuVM0/YFwqAtyCk0foCPQYum9xeoS5PegvdAH6VARY+2jg48NRY9+66O/k8B+/FFrjeNLAzsrAfzsJTR+7TIpxAAAAAElFTkSuQmCC"
-            />
-          </a>
-          <button class="menu-toggle" aria-label="Toggle navigation">
-            &#9776;
-          </button>
-        </div>
+          <div class="logo">
+              <a href="#">Kratos.</a>
+          </div>
+          <ul class="nav-links" id="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="nav-actions">
+              <a href="#" class="signup-btn" id="signup-btn">Sign Up</a>
+              <a href="#" class="cart-icon">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAB10lEQVRIS82Vu0oEMRSGd+0V7Rar9Q30BUS7BfHWWSgo+gBupZ1rp5U+gOKCFnbeECwHX0DfwK3ETtFe/P8hGbJLNjnJzDAeOGRITs6Xc0mmXqtI6hVxa/8C3ET0VC1JmdkwIz4AqGPAevhehb6WcQAXmDzCp8oGm6leBmxXAWfKiHpYc40D9qnAXYxbRUft6uoLwDYVkLX+ygln2aipuMDTWH/JCRvcPo+JxAfm+huUtS9KWDKWzvuAMNVMOeUUehdxghPsYfZYKjZqTwJmkzHdjDqBMlUhwv3MGsdbKHslFcmTyRPrq8U7nZ5YKCuwu1G2hBIuBue5WoQSzjTz0NnNkETME5oOJoTRNmHHNFPYH21znxRspizrTM8BzLc/u0Yhqda2+mqxxpL3W9vzJ8Nu7hNpxNzEBmOjUXwvGdOsr2EH34d5wGaTebKcLffd3Zga6z3m+y2Bd2Fk/cGEpFqD5iREZcP6Wn8uMeBZOJuEXjsOsIa1d+jzMJtQ8DYcnSlnVxg3LI4vMbeu5ncwntvgoeB7OFlUjn4wjlmcfmNuVM0/YFwqAtyCk0foCPQYum9xeoS5PegvdAH6VARY+2jg48NRY9+66O/k8B+/FFrjeNLAzsrAfzsJTR+7TIpxAAAAAElFTkSuQmCC"/>
+              </a>
+              <!-- Toggle Button for Mobile View -->
+              <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+          </div>
       </nav>
-    </header>
+  </header>
+
+  <!-- Sign Up Pop-up Form -->
+<div id="signup-popup" class="popup">
+  <div class="popup-content">
+      <!-- Cross Icon to close the pop-up -->
+      <span class="close-btn" id="close-signup-popup">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Confirm Password" required>
+          <button type="submit">Sign Up</button>
+          <button type="button" class="google-signup">Sign Up with Google</button>
+          <div class="login-section">
+            <p>Already have an account? <button><a href="#" id="open-login-popup">Login</a></button></p>
+          </div>
+          
+      </form>
+  </div>
+</div>
+
+
+  <!-- Login Pop-up Form -->
+  <div id="login-popup" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" id="close-login-popup">&times;</span>
+          <h2>Login</h2>
+          <form id="login-form">
+              <input type="email" placeholder="Email" required>
+              <input type="password" placeholder="Password" required>
+              <button type="submit">Login</button>
+              <!-- <p>or login with</p> -->
+              <button type="button" class="google-signup">Login with Google</button>
+              <div class="sign-section">
+                <p>Don't have an account? <button><a href="#" id="open-signup-popup-2">Sign Up</a></button> </p>
+              </div>
+             
+          </form>
+      </div>
+  </div>
+    
+    <!-- ---------------------------nav bar-------------------------------- -->
+
     <div id="page1">
       <div id="hero">
         <img src="/src/assets/Screenshot 2024-08-11 013540.png">

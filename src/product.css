@@ -1,0 +1,133 @@
+/* General Styles */
+.product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.1);
+}
+
+.product-details {
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+
+.product-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.star {
+    font-size: 1.2rem;
+    color: #ff9800;
+}
+
+.rating-tag {
+    margin-left: 0.5rem;
+    color: #888;
+    font-size: 0.875rem;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.price {
+    color: #e91e63;
+    margin-right: 0.5rem;
+}
+
+.discount {
+    background-color: #f44336;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.product-description {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #4caf50;
+}
+
+.add-to-cart:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.buy-now {
+    background-color: #2196f3;
+}
+
+.buy-now:hover {
+    background-color: #1976d2;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .product-card {
+        margin: 1rem;
+    }
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
